@@ -1,0 +1,51 @@
+﻿@model EmployeeViewModel.Models.EmployeeCompanyViewModel
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+
+
+        <h2>Employees</h2>
+        <table border="1">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Salary</th>
+                <th>Designation</th>
+            </tr>
+            @foreach (var employee in Model.Employees)
+            {
+                <tr>
+                    <td>@employee.Id</td>
+                    <td>@employee.Name</td>
+                    <td>@employee.Salary</td>
+                    <td>@employee.Designation</td>
+                </tr>
+            }
+        </table>
+
+        <h2>Companies</h2>
+        <table border="1">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Location</th>
+            </tr>
+            @foreach (var company in Model.Companies)
+            {
+                <tr>
+                    <td>@company.Id</td>
+                    <td>@company.Name</td>
+                    <td>@company.Location</td>
+                </tr>
+            }
+        </table>
+
+    </div>
+</body>
+</html>
